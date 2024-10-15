@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Error Handling</title>
+    <script>
+        function myFunc() {
+            var a = 10;
+            try {
+                var s = a.toUpperCase();
+                alert("Value of a variable is: " + a);
+            }
+            catch (error) {
+                alert(error);
+            }
+            finally {
+                alert("Finally will always executed!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Click the following button to call the function.</p>
+    <form>
+
+        <input type="button" onclick="myFunc()" value="My Function"></input>
+    </form>
+</body>
+</html>

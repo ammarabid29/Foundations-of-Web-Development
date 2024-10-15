@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Animation</title>
+    <script>
+        var arr = new Array("images/1.png", "images/2.png", "images/3.png", "images/4.png");
+        var i = 1;
+        var ref;
+
+        function picLibarary() {
+            document.img1.src = arr[i];
+            i++;
+            if (i > 3) i = 0;
+        }
+
+        function start() {
+            ref = setInterval("picLibarary()", 1000);
+        }
+
+        function stop() {
+            clearInterval(ref);
+        }
+    </script>
+</head>
+<body>
+    <img src="images/1.png" name="img1" onmouseover="stop()" onmouseout="start()" alt="">
+</body>
+</html>

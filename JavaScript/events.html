@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Events</title>
+    <script>
+        function MouseOver() {
+            document.images["img1"].src = "images/red.jpeg";
+        }
+        function MouseOut() {
+            document.images["img1"].src = "images/green.jpg";
+        }
+        function Load() {
+            document.images["img1"].src = "images/green.jpg";
+        }
+    </script>
+</head>
+<body onload="Load()">
+    <img width="400px" name="img1" onmouseover="MouseOver()" onmouseout="MouseOut()">
+</body>
+</html>
