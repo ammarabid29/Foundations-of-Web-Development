@@ -3,17 +3,21 @@ import { useState } from "react";
 
 const Home = () => {
 
-    const [name, setName] = useState("Ammar");
+    const [count, setCount] = useState(0);
 
-    const handleClick = () => {
-        setName("Abid");
+    const increaseCount = () => {
+        setCount(count + 1);
+    }
+    const decreaseCount = () => {
+        setCount(count - 1);
     }
 
     return (
         <div className="Home">
             <h2>Homepage</h2>
-            <button onClick={handleClick}>Click Me</button>
-            <p>{name}</p>
+            <button onClick={increaseCount}>Click to Increase</button>
+            <p>Count is: {count}</p>
+            <button onClick={decreaseCount}>Click to Decrease</button>
         </div>
     );
 }
